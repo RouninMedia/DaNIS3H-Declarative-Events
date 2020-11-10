@@ -40,7 +40,7 @@ Enter **Da3SH Declarative Events**:
 
 All of the **Da3SH Declarative Events** are described within the `data-events` attribute, above.
 
-It emerges that the value of the `data-events` attribute above is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`), like this:
+It emerges that the value of the `data-events` attribute, above, is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`), like this:
 
 ```
 data-events="{
