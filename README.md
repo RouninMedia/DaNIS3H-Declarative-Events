@@ -38,7 +38,9 @@ Enter **Da3SH Declarative Events**:
 <button type="button" class="myButton" data-events="{«data-event-1» : {«eventListener» : «click», «eventAction» : «myFunction1»}, «data-event-2» : {«eventListener» : «click», «eventAction» : «myFunction2»}}">Click Here</button>
 ```
 
-All of the **Da3SH Declarative Events** are described within the `data-events` attribute, above:
+All of the **Da3SH Declarative Events** are described within the `data-events` attribute, above.
+
+It emerges that the value of the `data-events` attribute is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`):
 
 ```
 data-events="{
