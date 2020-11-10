@@ -1,1 +1,33 @@
 # Declarative Events in Da3SH Markup Components
+
+Da3SH Declarative Events enable javascript event listeners to be attached to DOM Elements while maintaining a separation of concerns.
+
+Traditionally in javascript, we might implement the following inline click-handler:
+
+## Example 1
+```
+<button type="button" class="myButton" onclick="myFunction1(); myFunction2();">Click Here</button>
+```
+
+Alternatively, if we want to be a little more sophisticated and make our javascript _unobtrusive_ we might remove the inline click-handler above and use `addEventListener` instead:
+
+## Example 2
+```
+<button type="button" class="myButton">Click Here</button>
+
+<script>
+const myButton = document.getElementsByClassName('myButton')[0];
+
+myButton.addEventListener('click', myFunction1, false);
+myButton.addEventListener('click', myFunction2, false);
+</script>
+```
+
+This, essentially, leaves us with a choice. We can either:
+
+a) declare event listeners inline (although that requires mixing javascript in with HTML markup)
+b) maintain a _Separation of Concerns_ (although that precludes being able to introduce event listeners declaratively)
+
+```
+data-events="{«data-event-1» : {«eventListener» : «click», «eventAction» : «myFunction1»}, «data-event-2» : {«eventListener» : «click», «eventAction» : «myFunction2»}}"
+```
