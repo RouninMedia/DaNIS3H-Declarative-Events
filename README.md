@@ -28,7 +28,7 @@ But this leaves us with a choice. We can either:
 a) declare event listeners inline (although that requires mixing javascript in with HTML markup)
 b) maintain a _Separation of Concerns_ (although that precludes being able to introduce event listeners declaratively)
 
-What we can't achieve with either of the two approaches above is declare event listeners inline _while_ maintaining a _Separation of Concerns_.
+What we ***can't achieve*** with either of the two approaches above is declare event listeners inline _while_ maintaining a _Separation of Concerns_.
 
 Enter **Da3SH Declarative Events**:
 
