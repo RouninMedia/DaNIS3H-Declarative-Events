@@ -1,6 +1,6 @@
 # Declarative Events in Da3SH Markup Components
 
-**Da3SH Declarative Events** enable javascript event listeners to be attached to DOM Elements while maintaining a _Separation of Concerns_.
+**Da3SH Declarative Events** enable multiple javascript event listeners (including multiple javascript event listeners of the same type) to be attached to DOM Elements while maintaining a _Separation of Concerns_.
 
 Traditionally in javascript, we might implement the following inline click-handler:
 
@@ -30,9 +30,9 @@ b) maintain a _Separation of Concerns_ (although that precludes being able to in
 
 What we ***can't achieve*** with either of the two approaches above is declare event listeners inline _while_ maintaining a _Separation of Concerns_.
 
+We also can't declare multiple event listeners of the same type as inline HTML attributes.
+
 Enter **Da3SH Declarative Events**:
-
-
 
 ```
 <button type="button" class="myButton" data-events="{«click:myFunction1» : {«eventListener» : «click», «eventAction» : «myFunction1»}, «click:myFunction2» : {«eventListener» : «click», «eventAction» : «myFunction2»}}">Click Here</button>
