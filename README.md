@@ -1,6 +1,6 @@
-# Declarative Events in Da3SH Markup Components
+# Declarative Events in DaNIS3H Markup Components
 
-**Da3SH Declarative Events** enable multiple javascript event listeners (including multiple javascript event listeners of the same type) to be attached to DOM Elements while maintaining a _Separation of Concerns_.
+**DaNIS3H Declarative Events** enable multiple javascript event listeners (including multiple javascript event listeners of the same type) to be attached to DOM Elements while maintaining a _Separation of Concerns_.
 
 Traditionally in javascript, we might implement the following inline click-handler:
 
@@ -32,13 +32,13 @@ What we ***can't achieve*** with either of the two approaches above is declare e
 
 We also can't declare multiple event listeners of the same type as inline HTML attributes.
 
-Enter **Da3SH Declarative Events**:
+Enter **DaNIS3H Declarative Events**:
 
 ```
 <button type="button" class="myButton" data-events="{«click:myFunction1» : {«eventListener» : «click», «eventAction» : «myFunction1»}, «click:myFunction2» : {«eventListener» : «click», «eventAction» : «myFunction2»}}">Click Here</button>
 ```
 
-All of the **Da3SH Declarative Events** are described within the `data-events` attribute, above.
+All of the **DaNIS3H Declarative Events** are described within the `data-events` attribute, above.
 
 It emerges that the value of the `data-events` attribute, above, is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`), like this:
 
