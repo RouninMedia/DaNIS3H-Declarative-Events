@@ -65,7 +65,7 @@ _______
 
 I've recently (Nov 2021) come across **htmx** which, similarly, introduces the ability to write interactivity into declarative HTML.
 
-Though, on first reading, **htmx** appears to me both (a little) more limited and (certainly) more prescriptive than **DaNIS3H Declarative Events**.
+On first reading, though, **htmx** appears to me both (a little) more limited and (certainly) more prescriptive than **DaNIS3H Declarative Events**.
 
 See:
 
