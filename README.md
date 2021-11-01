@@ -14,7 +14,7 @@ Traditionally, in (old-school) javascript, we might implement the following inli
 
 If we want to be a little more contemporary (and sophisticated) and make our javascript _unobtrusive_ we might remove the inline click-handler above and use `addEventListener` instead:
 
-```js
+```javascript
 <button type="button" class="myButton">Click Here</button>
 
 <script>
