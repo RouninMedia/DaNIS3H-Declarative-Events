@@ -25,7 +25,7 @@ myButton.addEventListener('click', myFunction2, false);
 </script>
 ```
 
-But this leaves us with a choice. We can either:
+But this leaves us with a choice. We can ***either***:
 
 - declare event listeners inline (although that requires mixing javascript in with HTML markup)
 - maintain a _Separation of Concerns_ (although that precludes being able to introduce event listeners declaratively)
@@ -42,7 +42,7 @@ Enter **DaNIS3H Declarative Events**:
 
 All of the **DaNIS3H Declarative Events** are described within the `data-events` attribute, above.
 
-It emerges that the value of the `data-events` attribute, above, is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`), like this:
+It may be apparent that the value of the `data-events` attribute, above, is, in fact, a quasi-`JSON` string which employs _guillemets_ (`«` and `»`) instead of double-quotes (`"` & `"`), like this:
 
 ```
 data-events="{
