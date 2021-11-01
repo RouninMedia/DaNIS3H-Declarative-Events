@@ -61,6 +61,44 @@ data-events="{
 
 _______
 
+## `attachEvents()` Function
+
+```
+
+const attachEvents = () => {
+
+  let parseEvent = new Event('parse');
+  let eventElements = document.querySelectorAll('[data-danis3h-events]');
+
+  eventElements.forEach(eventElement => {
+
+    let eventsObject = JSON.parse(eventElement.dataset.danis3hEvents.replace(/«|»/g, '"'));
+    let events = Object.values(eventsObject);
+
+    events.forEach(eventObject => {
+
+      let eventAction = eventObject.eventAction;
+      let eventActionData = (eventObject.eventActionData === Object(eventObject.eventActionData)) ? Object.values(eventObject.eventActionData) : [];
+      let eventUseCapture = eventObject.eventUseCapture || false;
+
+      eventElement.addEventListener(eventObject.eventListener, (e) => {eventActionData.unshift(e); eval(eventAction)(...eventActionData);}, eventUseCapture);
+      eventElement.dataset.attachedDanis3hEvents = eventElement.dataset.danis3hEvents;
+      setTimeout(() => eventElement.removeAttribute('data-danis3h-events'), 20);
+
+      if (eventObject.eventListener === 'parse') {eventElement.dispatchEvent(parseEvent);}
+    });
+  });
+};
+
+// FORMER VERSION:     if ((eventActionData.length < 1) || ((typeof eventActionData[0] === 'object') && ('type' in eventActionData[0] === false))) {eventActionData.unshift(e);}
+// IMPROVED VERSION:   if ((eventActionData.length < 1) || (typeof eventActionData[0] !== 'object') || ((typeof eventActionData[0] === 'object') && ('type' in eventActionData[0] === false))) {eventActionData.unshift(e);}
+
+window.addEventListener('DOMContentLoaded', attachEvents, false);
+
+```
+
+_______
+
 ## Similar Ideas:
 
 I've recently (Nov 2021) come across **htmx** which, similarly, introduces the ability to write interactivity into declarative HTML.
