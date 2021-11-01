@@ -2,16 +2,18 @@
 
 **DaNIS3H Declarative Events** enable multiple javascript event listeners (including multiple javascript event listeners of the same type) to be attached to DOM Elements while maintaining a _Separation of Concerns_.
 
+## Example 1
+
 Traditionally, in (old-school) javascript, we might implement the following inline click-handler:
 
-## Example 1
 ```
 <button type="button" class="myButton" onclick="myFunction1(); myFunction2();">Click Here</button>
 ```
 
-Alternatively, if we want to be a little more sophisticated and make our javascript _unobtrusive_ we might remove the inline click-handler above and use `addEventListener` instead:
-
 ## Example 2
+
+If we want to be a little more contemporary (and sophisticated) and make our javascript _unobtrusive_ we might remove the inline click-handler above and use `addEventListener` instead:
+
 ```
 <button type="button" class="myButton">Click Here</button>
 
