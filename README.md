@@ -1,4 +1,4 @@
-# Declarative Events in DaNIS3H Markup Components
+# DaNIS3H Declarative Events (in DaNIS3H Markup Components)
 
 **DaNIS3H Declarative Events** enable multiple javascript event listeners (including multiple javascript event listeners of the same type) to be attached to DOM Elements while maintaining a _Separation of Concerns_.
 
