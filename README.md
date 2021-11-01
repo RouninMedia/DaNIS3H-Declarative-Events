@@ -6,7 +6,7 @@
 
 Traditionally, in (old-school) javascript, we might implement the following inline click-handler:
 
-```
+```html
 <button type="button" class="myButton" onclick="myFunction1(); myFunction2();">Click Here</button>
 ```
 
@@ -14,7 +14,7 @@ Traditionally, in (old-school) javascript, we might implement the following inli
 
 If we want to be a little more contemporary (and sophisticated) and make our javascript _unobtrusive_ we might remove the inline click-handler above and use `addEventListener` instead:
 
-```javascript
+```html
 <button type="button" class="myButton">Click Here</button>
 
 <script>
@@ -36,7 +36,7 @@ We also can't declare multiple event listeners of the same type as inline HTML a
 
 Enter **DaNIS3H Declarative Events**:
 
-```
+```html
 <button type="button" class="myButton" data-events="{«click:myFunction1» : {«eventListener» : «click», «eventAction» : «myFunction1»}, «click:myFunction2» : {«eventListener» : «click», «eventAction» : «myFunction2»}}">Click Here</button>
 ```
 
@@ -63,8 +63,7 @@ _______
 
 ## `attachEvents()` Function
 
-```
-
+```javascript
 const attachEvents = () => {
 
   let parseEvent = new Event('parse');
@@ -94,7 +93,6 @@ const attachEvents = () => {
 // IMPROVED VERSION:   if ((eventActionData.length < 1) || (typeof eventActionData[0] !== 'object') || ((typeof eventActionData[0] === 'object') && ('type' in eventActionData[0] === false))) {eventActionData.unshift(e);}
 
 window.addEventListener('DOMContentLoaded', attachEvents, false);
-
 ```
 
 _______
